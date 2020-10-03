@@ -1,0 +1,23 @@
+1-)apt-get install vsftpd 
+2-)sudo adduser username
+3-)sudo mkdir /home/username/ftp
+4-)sudo chown nobody:nogroup /home/username/ftp
+5-)sudo chmod a-w /home/username/ftp
+6-)sudo mkdir /home/username/ftp/files
+7-)sudo chown username:username /home/username/ftp/files
+8-)sudo nano /etc/vsftpd.conf 
+(içerisinde ki her şeyi silip altta ki kodları ekliyoruz.)
+listen=YES
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+chroot_local_user=YES
+user_sub_token=$username
+local_root=/home/$username/ftp
+userlist_enable=YES
+userlist_file=/etc/vsftpd.userlist
+userlist_deny=NO
+9-)echo “update_ftp” | sudo tee -a /etc/vsftpd.userlist
+10-)sudo systemctl restart vsftpd
+11-)sudo systemctl start vsftpd (Açmak için)
+12-)sudo systemctl stop vsftpd  (Kapatmak için)
