@@ -1,0 +1,7 @@
+# Write ISO to your USB flash drive:
+sudo dd bs=4M if=/path/to/iso of=/dev/sdX status=progress && sync
+
+# Restore your USB flash drive (if you want)
+sudo wipefs --all /dev/sdX
+sudo cfdisk /dev/sdX
+sudo mkfs.vfat -n 'yourlabel' /dev/sdX1
