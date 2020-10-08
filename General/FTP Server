@@ -1,4 +1,5 @@
 1-)apt-get install vsftpd 
+arch için -> pacman -S vsftpd
 2-)sudo adduser username
 3-)sudo mkdir /home/username/ftp
 4-)sudo chown nobody:nogroup /home/username/ftp
