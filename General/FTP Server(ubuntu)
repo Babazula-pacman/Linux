@@ -17,7 +17,7 @@ local_root=/home/$username/ftp
 userlist_enable=YES
 userlist_file=/etc/vsftpd.userlist
 userlist_deny=NO
-9-)echo “update_ftp” | sudo tee -a /etc/vsftpd.userlist
+9-)echo “username” | sudo tee -a /etc/vsftpd.userlist
 10-)sudo systemctl restart vsftpd
-11-)sudo systemctl start vsftpd (Açmak için)
-12-)sudo systemctl stop vsftpd  (Kapatmak için)
+11-)sudo systemctl start vsftpd (to open
+12-)sudo systemctl stop vsftpd  (to close)
