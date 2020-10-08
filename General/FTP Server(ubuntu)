@@ -6,7 +6,7 @@
 6-)sudo mkdir /home/username/ftp/files
 7-)sudo chown username:username /home/username/ftp/files
 8-)sudo nano /etc/vsftpd.conf 
-(içerisinde ki her şeyi silip altta ki kodları ekliyoruz.)
+(ccopy and paste the text below into the terminal or text editor)
 listen=YES
 anonymous_enable=NO
 local_enable=YES
