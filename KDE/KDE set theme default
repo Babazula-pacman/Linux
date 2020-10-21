@@ -8,3 +8,4 @@ rm -rf .config/session/kwin_*
 rm -rf .gtkrc-2.0*
 rm -rf .cache/upstart/startkde.log*
 rm -f .xsession-errors
+Reboot
